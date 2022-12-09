@@ -1,0 +1,112 @@
+*{
+  box-sizing: border-box;
+}
+.neonText {
+     color: #fff;
+    text-shadow:
+     /* 0 0 7px #fff, */
+    /*  0 0 10px #fff,*/
+      0 0 21px #fff,
+      0 0 42px #f09,
+      0 0 82px #f09,
+      0 0 92px #f09,
+      0 0 102px #f09,
+      0 0 151px #f09;
+}
+body{
+  margin: 0;
+  display: grid;
+}
+h1{
+  color: red;
+}
+.Dealer-Text{
+  text-align: center;
+  vertical-align: middle;
+  grid-column: 3;
+}
+#ddebug{
+  vertical-align: middle;
+  justify-content: center;
+}
+.Player-Text{
+  text-align: center;
+}
+.board-deck {
+  grid-row: 2;
+}
+#log_info {
+  font-weight: bold;
+}
+
+.deck{
+  background: rgb(170, 7, 7);
+  height: 100%;
+  width: 100%;
+  border:1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: .5rem;
+  color: white;
+}
+.board{
+  background-image: url(https://raw.githubusercontent.com/mewcifur28/Blackjack/main/images/bg.jpg);
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+  user-select: none;
+}
+
+
+#card{
+  grid-column: 2;
+  grid-row: 8;
+}
+#stand{
+  grid-column: 3;
+  grid-row: 8;
+}
+#new_game{
+  grid-column: 4;
+  grid-row: 8;
+}
+.card {
+  background: white;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border:1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  border-radius: .5rem;
+}
+
+.card.red {
+  color: red;
+}
+
+.card.black {
+  color: black;
+}
+.card::before,
+.card::after {
+  position: absolute;
+  content: attr(data-value);
+  font-size: 2rem;
+}
+
+.card::before {
+  top: .5rem;
+  left: .5rem;
+}
+
+.card::after {
+  bottom: .5rem;
+  right: .5rem;
+  transform: rotate(180deg);
+}
